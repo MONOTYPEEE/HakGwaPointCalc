@@ -91,19 +91,6 @@ function summer(){
     textC.innerHTML = `총 ${parseFloat((chong*0.7).toFixed(2))}점`
 }
 function summerGT(){
-    console.log(
-    (`${numberOrZero(hkji[0].value * 10)}  
-${numberOrZero(isOver50((hkji[1].value-4) * 5))}  
-${numberOrZero(isOver50((hkji[2].value-10) * 5))}
-${numberOrZero(toeikT())}
-${numberOrZero(toeikSpkT(hkji[5]))}
-${numberOrZero(paps())}
-${numberOrZero(mountain())}
-${numberOrZero(hkji[9].value*20)}
-${numberOrZero(hkji[10].value*30)}
-${numberOrZero(hkji[11].value*50)}
-${numberOrZero(hkji[12].value*30)}`)
-    );
     hkjiPT = 
     (numberOrZero(hkji[0].value * 10)
     + numberOrZero(isOver50((hkji[1].value-4) * 5))
@@ -115,7 +102,8 @@ ${numberOrZero(hkji[12].value*30)}`)
     + numberOrZero(hkji[9].value*20)
     + numberOrZero(hkji[10].value*30)
     + numberOrZero(hkji[11].value*50)
-    + numberOrZero(hkji[12].value*30));
+    + numberOrZero(hkji[12].value*30)
+    + numberOrZero(hkji[13].value*30));
 
     document.querySelector("#fas").innerText = `${hkjiPT}점`
 }
