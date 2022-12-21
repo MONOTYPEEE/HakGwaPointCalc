@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <head>
     <title>CEF_CALC</title>
+    <link rel="stylesheet" href="./css.css">
 </head>
 <div style="display: flex; ">
 
-    <div style="
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;">
+    <div class="flexv">
         <h3>1학기</h3>
         <select class="gtdd">
             <option value="" disabled selected>국어(2)</option>
@@ -81,10 +79,7 @@
         <h3 class="onlyG">0/300점</h3>
     </div>
 
-    <div style="
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;">
+    <div class="flexv">
         <h3>2학기</h3>
         <select class="gtdd">
             <option value="" disabled selected>국어(2)</option>
@@ -156,19 +151,25 @@
         </select>
     </div>
 
-    <div style="
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;">
+    <div class="flexv">
         <h3>학교장인증제</h3>
-        <label>인문영역(독서록)</label>
-        <input class="hkji" type="number" placeholder="권당 10점">
+        <label>인문영역</label>
+        <div>
+            <span>독서감상문</span>
+            <input class="hkji" type="number" placeholder="권당 10점">
+        </div>
 
-        <label>인성영약(봉사시간, 상점)</label>
-        <input class="hkji" type="number" placeholder="시간당 5점 (최대 50점)">
-        <input class="hkji" type="number" placeholder="상점당 5점 (최대 50점)">
+        <label>인성영역</label>
+        <div>
+            <span>봉사시간</span>
+            <input class="hkji" type="number" placeholder="시간당 5점 (최대 50점)">
+        </div>
+        <div>
+            <span>상점</span>
+            <input class="hkji" type="number" placeholder="상점당 5점 (최대 50점)">
+        </div>
 
-        <label>외국어영역(TOEIC,TEPS,TOEIC Speaking, OPIC)</label>
+        <label>외국어영역</label>
         <div>
             <span>TOEIC</span>
             <input class="hkji" type="number">
@@ -190,15 +191,27 @@
 
         <div>
             <span>사제동행 등반대회</span>
-            <label><input class="hkji" type="checkbox">참가</label>
-            <label></label><input class="hkji" type="checkbox">완주</label>
+            <label id="cb"><input class="hkji" type="checkbox">참가</label>
+            <label id="cb"><input class="hkji" type="checkbox">완주</label>
         </div>
 
-        <label>전문영역(프로젝트, 자격증)</label>
-        <input class="hkji" type="number" placeholder="팀 프로젝트">
-        <input class="hkji" type="number" placeholder="개인 프로젝트">
-        <input class="hkji" type="number" placeholder="기업 프로젝트">
-        <input class="hkji" type="number" placeholder="전동공아리 프로젝트">
+        <label>전문영역</label>
+        <div>
+            <span>팀 프로젝트</span>
+            <input class="hkji" type="number">
+        </div>
+        <div>
+            <span>개인 프로젝트</span>
+            <input class="hkji" type="number">
+        </div>
+        <div>
+            <span>기업 프로젝트</span>
+            <input class="hkji" type="number">
+        </div>
+        <div>
+            <span>전동공아리 프로젝트</span>
+            <input class="hkji" type="number">
+        </div>
 
         <h3 id="fas">0점</h3>
     </div>

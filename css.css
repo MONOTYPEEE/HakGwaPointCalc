@@ -1,0 +1,28 @@
+label{
+    font-weight: 800;
+    margin-top: 0.4rem;
+    font-size: 1.2rem;
+}
+
+#cb{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+span{
+    opacity: 0.8;
+}
+
+select{
+    width: 10rem;
+}
+
+.flexv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 1rem;
+    padding: 1rem;
+    border: 1px black solid;
+    border-radius: 1rem;
+}
