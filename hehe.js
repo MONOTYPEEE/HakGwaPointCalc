@@ -91,7 +91,7 @@ function summer(){
     abcde(tinS[17].value)*3;
 
     text.innerHTML = `총 ${chong}/300점`;
-    textC.innerHTML = `${parseFloat((chong*0.7).toFixed(2))} + ${parseFloat((hkjiPT*0.3).toFixed(2))} = ${parseFloat((chong*0.7+hkjiPT*0.3).toFixed(2))}점`
+    textC.innerHTML = `${parseFloat((chong*0.7).toFixed(2))}(70%) + ${parseFloat((hkjiPT*0.3).toFixed(2))}(30%) = ${parseFloat((chong*0.7+hkjiPT*0.3).toFixed(2))}점`
 }
 function summerGT(){
     hkjiPT = 
@@ -111,7 +111,7 @@ function summerGT(){
     );
 
     document.querySelector("#fas").innerText = `${hkjiPT}점`
-    textC.innerHTML = `${parseFloat((chong*0.7).toFixed(2))} + ${parseFloat((hkjiPT*0.3).toFixed(2))} = ${parseFloat((chong*0.7+hkjiPT*0.3).toFixed(2))}점`
+    textC.innerHTML = `${parseFloat((chong*0.7).toFixed(2))}(70%) + ${parseFloat((hkjiPT*0.3).toFixed(2))}(30%) = ${parseFloat((chong*0.7+hkjiPT*0.3).toFixed(2))}점`
 }
 
 hkji.forEach(function(el){
