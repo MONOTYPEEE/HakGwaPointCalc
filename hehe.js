@@ -35,12 +35,15 @@ function mountain(){
         return 0;
     }
 }
+function isover2(nm){
+    if(nm>=2) return nm;
+    else return 0;
+}
 function isOver50(nm){
     if(nm<50) return nm;
     else if(nm>=50) return 50;
 }
-function toeikT(){
-    const gt=hkji[3].value;
+function toeikT(gt){
     if(gt>=900) return 70;
     else if(gt>=800) return 65;
     else if(gt>=700) return 60;
@@ -87,25 +90,28 @@ function summer(){
     abcde(tinS[16].value)*2+
     abcde(tinS[17].value)*3;
 
-    text.innerHTML = `총합 ${chong}/300점`;
-    textC.innerHTML = `총 ${parseFloat((chong*0.7).toFixed(2))}점`
+    text.innerHTML = `총 ${chong}/300점`;
+    textC.innerHTML = `${parseFloat((chong*0.7).toFixed(2))} + ${parseFloat((hkjiPT*0.3).toFixed(2))} = ${parseFloat((chong*0.7+hkjiPT*0.3).toFixed(2))}점`
 }
 function summerGT(){
     hkjiPT = 
     (numberOrZero(hkji[0].value * 10)
     + numberOrZero(isOver50((hkji[1].value-4) * 5))
     + numberOrZero(isOver50((hkji[2].value-10) * 5))
-    + numberOrZero(toeikT())
-    + numberOrZero(toeikSpkT(hkji[5]))
-    + numberOrZero(paps())
+    + numberOrZero(isover2(hkji[3].value)*20)
+    + numberOrZero(toeikT(hkji[4].value))
+    + numberOrZero(toeikSpkT(hkji[5].value))
+    + numberOrZero(paps(hkji[6].value))
     + numberOrZero(mountain())
     + numberOrZero(hkji[9].value*20)
     + numberOrZero(hkji[10].value*30)
     + numberOrZero(hkji[11].value*50)
     + numberOrZero(hkji[12].value*30)
-    + numberOrZero(hkji[13].value*30));
+    + numberOrZero(hkji[13].value*20)
+    );
 
     document.querySelector("#fas").innerText = `${hkjiPT}점`
+    textC.innerHTML = `${parseFloat((chong*0.7).toFixed(2))} + ${parseFloat((hkjiPT*0.3).toFixed(2))} = ${parseFloat((chong*0.7+hkjiPT*0.3).toFixed(2))}점`
 }
 
 hkji.forEach(function(el){
